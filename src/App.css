@@ -26,3 +26,79 @@
 .live i{width:7px;height:7px;border-radius:50%;background:#36d9aa;box-shadow:0 0 0 4px #36d9aa18}
 @media(max-width:1050px){.stats{grid-template-columns:repeat(3,1fr)}.dashboard-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.stats{grid-template-columns:repeat(2,1fr)}.stat:last-child{grid-column:auto}.content header{margin-bottom:18px}.content h1{font-size:25px}.panel{padding:16px}.toolbar{align-items:stretch;flex-direction:column;gap:10px}.search{width:100%}.actions button{padding:9px 10px}.security-card{align-items:flex-start;flex-wrap:wrap}.live{margin-right:auto}.stat strong{font-size:23px}.stat{min-height:120px;padding:15px}}
+
+/* Mobile-first admin polish */
+@media(max-width:650px){
+  body{overflow-x:hidden}
+  .shell{display:block}
+  .shell aside{
+    position:sticky;top:0;z-index:50;width:100%;height:auto;min-height:0;
+    padding:10px 12px;background:#0b1116ee;backdrop-filter:blur(18px);
+    border-left:0;border-bottom:1px solid #24343b;flex-direction:column;
+  }
+  .brand{padding:0 4px 9px;gap:9px}
+  .brand .mark{width:36px;height:36px;border-radius:11px}
+  .brand>div:last-child{display:block}
+  .brand b{font-size:16px}
+  .brand small{font-size:8px}
+  .shell nav{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:5px;
+  }
+  .shell nav button{
+    min-width:0;height:43px;padding:6px 3px;border-radius:11px;
+    justify-content:center;flex-direction:column;gap:2px;font-size:10px!important;
+  }
+  .shell nav button svg{width:17px;height:17px}
+  .shell nav span{
+    position:absolute;margin-top:-27px;margin-right:-27px;font-size:8px;padding:1px 5px;
+  }
+  .logout{
+    position:absolute;top:13px;left:12px;margin:0;width:36px;height:36px;
+    padding:0;justify-content:center;border-radius:10px;background:#ff425b12;
+  }
+  .content{padding:20px 12px 30px}
+  .content header{align-items:center;margin-bottom:15px}
+  .content header .eyebrow{display:none}
+  .content h1{font-size:24px;letter-spacing:-.5px;margin:0}
+  .icon{width:40px;height:40px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .stat,.stat-button{min-height:112px;padding:13px;border-radius:15px}
+  .stat-icon{margin-bottom:12px}
+  .stat strong{font-size:22px}
+  .stat small{font-size:11px}
+  .stat span{font-size:9px;margin-top:5px}
+  .stat:last-child{grid-column:auto}
+  .dashboard-grid{grid-template-columns:1fr;gap:10px}
+  .panel{margin-top:10px;padding:14px;border-radius:15px}
+  .panel-head{margin-bottom:8px}
+  .panel-head h2{font-size:15px}
+  .muted,small{font-size:11px}
+  .mini-row{padding:11px 0;gap:8px}
+  .mini-row .avatar{width:34px;height:34px;border-radius:10px}
+  .status{font-size:9px;padding:3px 7px}
+  .security-card{gap:10px}
+  .security-icon{width:36px;height:36px}
+  .security-card h2{font-size:14px}
+  .live{font-size:10px}
+  .toolbar{margin-bottom:10px}
+  .toolbar>span{font-size:10px}
+  .search{min-height:42px}
+  .search input{padding:10px 8px;font-size:12px}
+  .user-row{padding:12px 0;gap:10px}
+  .user{width:100%}
+  .user b{font-size:12px}
+  .user small{font-size:10px;max-width:100%;white-space:normal}
+  .actions{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .actions button{justify-content:center;min-height:38px;font-size:10px;padding:7px 5px}
+  .report{padding:12px;margin-bottom:8px;border-radius:12px}
+  .report b{font-size:11px}
+  .report p{font-size:11px}
+  .report button{width:100%;justify-content:center;min-height:38px}
+}
+@media(max-width:380px){
+  .shell nav button{font-size:9px!important}
+  .content{padding-inline:9px}
+  .stats{gap:7px}
+  .stat,.stat-button{padding:11px;min-height:105px}
+  .stat strong{font-size:20px}
+}
